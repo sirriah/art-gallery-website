@@ -1,0 +1,62 @@
+@use '../base';
+
+.button {
+    border: none;
+    font-family: "Big Shoulders Display";
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    position: relative;
+    background-color: base.$dark;
+    color: base.$light;
+    cursor: pointer;
+    transition: 200ms all ease-in-out;
+
+    &:hover{
+        background-color: base.$acent;
+
+        &::after{
+            background-color: black;
+        }
+    }
+    
+
+    &--arrow-right {
+        @extend .button;
+        padding: 1.5rem 5.5rem 1.5rem 2rem;
+    
+        &::after{
+            background-image: url("../assets/icon-arrow-right.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: base.$acent;
+            height: 100%;
+            width: 3.5rem;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0rem;
+            transition: 200ms all ease-in-out;
+        
+        }
+    }
+
+    &--arrow-left {
+        @extend .button--arrow-right;
+        padding: 1.5rem 2rem 1.5rem 5.5rem;
+    
+        &::after{
+            background-image: url("../assets/icon-arrow-left.svg");
+            right: unset;
+            left: 0;
+        }
+    }
+
+
+}
+
+
+
