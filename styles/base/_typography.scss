@@ -11,6 +11,7 @@
     &--xl {
         font-size: 3.75rem; // 60px
         line-height: 3.4375rem; // 55px
+        padding-block: 2rem;
         @include abstracts.breakpoint-up(medium) {
             font-size: 4.375rem; // 70px
             line-height: 4.0625rem; // 65px
@@ -56,6 +57,10 @@
             line-height: 2.25rem; // 36px
         }
     }
+}
+
+.paragraph{
+    padding-bottom: 2rem;
 }
 
 .body--m {

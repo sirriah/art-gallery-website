@@ -4,3 +4,12 @@
     padding: 0;
 }
 
+.container{
+    &--block{
+        padding-block: 2rem;
+    }
+
+    &--inline{
+        padding-inline: 1rem;
+    }
+}

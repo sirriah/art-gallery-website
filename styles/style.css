@@ -8,6 +8,7 @@
 .heading--xl {
   font-size: 3.75rem;
   line-height: 3.4375rem;
+  padding-block: 2rem;
 }
 @media only screen and (min-width: 40em) {
   .heading--xl {
@@ -64,6 +65,10 @@
   }
 }
 
+.paragraph {
+  padding-bottom: 2rem;
+}
+
 .body--m {
   font-family: "Outfit", sans-serif;
   font-size: 1.125rem;
@@ -90,10 +95,15 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.picture {
-  opacity: 0.5;
+.container--block {
+  padding-block: 2rem;
+}
+.container--inline {
+  padding-inline: 1rem;
 }
 
 .button, .button--arrow-right, .button--arrow-left {
@@ -140,6 +150,33 @@
   background-image: url("../assets/icon-arrow-left.svg");
   right: unset;
   left: 0;
+}
+
+.hero__picture {
+  width: 100%;
+}
+@media only screen and (min-width: 40em) {
+  .hero__picture {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .hero__text {
+    max-width: 25rem;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row: 1;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .hero {
+    display: grid;
+    grid-template-columns: auto 5rem auto;
+    grid-template-rows: auto;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
