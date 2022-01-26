@@ -1,4 +1,5 @@
 @use "../abstracts";
+@use "../base/colours";
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
@@ -7,11 +8,13 @@
     font-family: "Big Shoulders Display";
     font-weight: 900;
     text-transform: uppercase;
+    color: colours.$dark;
 
     &--xl {
         font-size: 3.75rem; // 60px
         line-height: 3.4375rem; // 55px
         padding-block: 2rem;
+        
         @include abstracts.breakpoint-up(medium) {
             font-size: 4.375rem; // 70px
             line-height: 4.0625rem; // 65px
@@ -38,6 +41,7 @@
     &--m {
         font-size: 3.125rem; // 50px
         line-height: 2.8125rem; // 45px
+        padding-block: 1.5rem;
         @include abstracts.breakpoint-up(medium) {
             font-size: 3.4375rem; // 55px
             line-height: 3.125rem; // 50px
@@ -63,22 +67,28 @@
     padding-bottom: 2rem;
 }
 
-.body--m {
+.body{
     font-family: 'Outfit', sans-serif;
-    font-size: 1.125rem; // 18px
-    line-height: 1.75rem; // 28px
-    @include abstracts.breakpoint-up(large) {
-        font-size: 1.375rem; // 32px
-        line-height: 2rem; //22px
-    }
-}
+    color: colours.$neutral;
 
-.body--s{
-    font-family: 'Outfit', sans-serif;
-    font-size: 1rem; // 16px
-    line-height: 1.625rem; // 26px
-    @include abstracts.breakpoint-up(large) {
+    &--m {
         font-size: 1.125rem; // 18px
         line-height: 1.75rem; // 28px
+        @include abstracts.breakpoint-up(large) {
+            font-size: 1.375rem; // 32px
+            line-height: 2rem; //22px
+        }
     }
+    
+    &--s{
+        font-size: 1rem; // 16px
+        line-height: 1.625rem; // 26px
+        @include abstracts.breakpoint-up(large) {
+            font-size: 1.125rem; // 18px
+            line-height: 1.75rem; // 28px
+        }
+    }
+
+    
 }
+

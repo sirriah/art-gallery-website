@@ -4,6 +4,7 @@
   font-family: "Big Shoulders Display";
   font-weight: 900;
   text-transform: uppercase;
+  color: #151515;
 }
 .heading--xl {
   font-size: 3.75rem;
@@ -41,6 +42,7 @@
 .heading--m {
   font-size: 3.125rem;
   line-height: 2.8125rem;
+  padding-block: 1.5rem;
 }
 @media only screen and (min-width: 40em) {
   .heading--m {
@@ -69,8 +71,11 @@
   padding-bottom: 2rem;
 }
 
-.body--m {
+.body {
   font-family: "Outfit", sans-serif;
+  color: #444444;
+}
+.body--m {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
@@ -80,9 +85,7 @@
     line-height: 2rem;
   }
 }
-
 .body--s {
-  font-family: "Outfit", sans-serif;
   font-size: 1rem;
   line-height: 1.625rem;
 }
@@ -152,15 +155,51 @@
   left: 0;
 }
 
-.hero__picture {
-  width: 100%;
+.hero {
+  padding-bottom: 7.5rem;
 }
 @media only screen and (min-width: 40em) {
-  .hero__picture {
+  .hero {
+    display: grid;
+    grid-template-columns: auto 5rem auto;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .hero {
+    grid-template-columns: minmax(1.5rem, 1fr) repeat(4, 17.1875rem) minmax(1.5rem, 1fr);
+    padding-bottom: 11.25rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .hero__image {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 1;
   }
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__image {
+    background-color: #151515;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: minmax(1.5rem, 1fr) repeat(3, 17.1875rem);
+  }
+}
+.hero__picture {
+  width: 100%;
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__picture {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+.hero__picture img {
+  display: block;
 }
 @media only screen and (min-width: 40em) {
   .hero__text {
@@ -170,13 +209,32 @@
     grid-row: 1;
   }
 }
-@media only screen and (min-width: 40em) {
-  .hero {
-    display: grid;
-    grid-template-columns: auto 5rem auto;
-    grid-template-rows: auto;
+@media only screen and (min-width: 67.5em) {
+  .hero__text {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__heading {
+    max-width: 28rem;
+    color: white;
+    mix-blend-mode: difference;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  .hero__paragraph {
+    max-width: 21.875rem;
+  }
+}
+
+.gallery {
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */
